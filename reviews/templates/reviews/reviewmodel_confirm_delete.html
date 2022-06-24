@@ -1,11 +1,19 @@
+{% extends "reviews/reviews_inicio.html" %}
+{% block title %}CINEMA - Borrar{% endblock %}
+  </head>
+  <body>
+{% block content %}
+
+
 
 <form method="post">{% csrf_token %}
     <p>¿Está Seguro que quiere borrar "{{ object }}"?</p>
     {{ form }}
-    <input type="submit" value="Confirmar">
+    <button class="btn btn-primary" type="submit">Confirmar</button>
     
 </form>
 
+{% endblock %}
 
 
 

@@ -1,3 +1,9 @@
+{% extends "reviews/reviews_inicio.html" %}
+{% block title %}CINEMA - Reviews{% endblock %}
+  </head>
+  <body>
+{% block content %}
+
 <a href="{% url 'user_profile' user.id %}">Volver a Profile</a>
 
 <form method="post">
@@ -5,3 +11,6 @@
     {{ form.as_p }}
     <input type="submit" value="Guardar">
 </form>
+
+
+{% endblock %}

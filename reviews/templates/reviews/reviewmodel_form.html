@@ -1,7 +1,18 @@
-<a href="{% url 'reviews_list' %}">Volver a Lista</a>
+{% extends "reviews/reviews_inicio.html" %}
+{% block title %}CINEMA - Reviews{% endblock %}
+  </head>
+  <body>
+{% block content %}
+
+
 
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Guardar">
+    <br>
+    <input class="btn btn-primary btn-sm" type="submit" value="Guardar">
+ 
 </form>
+
+<a class="btn btn-primary btn-sm" role="button" href="{% url 'reviews_list' %}">Volver a Lista</a>
+{% endblock %}

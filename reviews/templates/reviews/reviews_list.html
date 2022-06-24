@@ -4,45 +4,89 @@
   <body>
 {% block content %}
 
- 
 
   {% if user.is_authenticated %}
-  
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
   <a href="{% url 'user_logout' %}">
-    <button type="button" class="btn btn-outline-primary">
+    <button type="button" class="btn btn-outline-primary btn-sm">
       Salir
     </button></a>
     
     <a href="{% url 'review_create' %}">
-    <button type="button" class="btn btn-outline-primary">
+    <button type="button" class="btn btn-outline-primary btn-sm">
       Nueva Rewiew
     </button></a>
   <a href="{% url 'user_profile' user.id %}">
-    <button type="button" class="btn btn-outline-primary">
+    <button type="button" class="btn btn-outline-primary btn-sm">
       Perfil {{user.username}}
     </button></a>
-  {% else %}
-    <button type="button" class="btn btn-outline-primary">
-      <a href="{% url 'user_login' %}">Entrar</a>
-    </button>
-    <button type="button" class="btn btn-outline-primary">
-      <a href="{% url 'user_signup' %}">Crear Cuenta</a>
-    </button>
+  </div>
+  <br>
   {% endif %}
-
-
+<!-- 
+  <table class="table">
+    <thead>
+      <tr>
+        
+        <th scope="col">Pelicula</th>
+        <th scope="col">Director</th>
+        <th scope="col">Autor</th>
+      </tr> -->
+    <!-- </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table> -->
 
   {% if object_list %}
+  <table class="table">
+    <thead>
+      <tr>
+        
+        <th scope="col">Pelicula</th>
+        <th scope="col">Director</th>
+        <th scope="col">Año Estreno</th>
+        <th scope="col">Autor</th>
+        <th scope="col">
+
+        </th>
+      </tr>
+    </thead>
       {% for review in object_list %}
-      <li>
+        
+      <tbody>
+        <tr>
           
-          <a href="{% url 'review_detail' review.id %}">{{review.titulo}}</a>
+          <td><a href="{% url 'review_detail' review.id %}">{{review.titulo}}</a></td>
+          <td><a>{{review.director}}</a></td>
+          <td><a>{{review.estreno}}</a></td>
+          <td><a>{{review.autor}}</a></td>
           {% if user.is_authenticated %}
-            <a href="{% url 'review_delete' review.id %}">Borrar</a>
-            <a href="{% url 'review_update' review.id %}">Editar</a>
+          <td><a href="{% url 'review_delete' review.id %}">Borrar</a></td>
+          <td><a href="{% url 'review_update' review.id %}">Editar</a></td>
           {% endif %}
-      </li>
+        </tr>
+        
+      </tbody>
+      
       {% endfor %}
+    </table>
   {% else %}
     <h1> Aún no hay reviews</h1>
   {% endif %}
