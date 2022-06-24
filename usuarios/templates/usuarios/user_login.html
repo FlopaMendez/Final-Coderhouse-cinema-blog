@@ -1,0 +1,13 @@
+{% extends "reviews/reviews_inicio.html" %}
+{% block title %}CINEMA - Entrar{% endblock %}
+  </head>
+  <body>
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Iniciar Sesión</button>
+</form>
+
+{% endblock %}

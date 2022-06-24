@@ -25,3 +25,17 @@ class UserLogout(LogoutView):
     template_name = 'usuarios/user_logout.html'
 
 
+class UserProfile(DetailView):
+
+    model = User
+    template_name = "usuarios/user_detail.html"
+
+
+class UserUpdate(LoginRequiredMixin, UpdateView):
+
+    model = User
+    template_name = "usuarios/user_form.html"
+    fields = ["username", "email", "first_name", "last_name"]
+
+    def get_success_url(self):
+      return reverse_lazy("user_profile", kwargs={"pk": self.request.user.id})

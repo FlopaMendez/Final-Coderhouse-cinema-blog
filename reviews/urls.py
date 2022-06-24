@@ -9,4 +9,5 @@ urlpatterns = [
     path("editar/<pk>/", views.ReviewUpdate.as_view(), name ="review_update"),
     path("borrar/<pk>/", views.ReviewDelete.as_view(), name ="review_delete"),
     path('lista_reviews/',views.ReviewsList.as_view(), name="reviews_list"),
+    path("buscar_pelicula/", views.buscar_pelicula, name = 'buscar'),
 ]

@@ -1,9 +1,14 @@
+{% extends "reviews/reviews_inicio.html" %}
+{% block title %}CINEMA - Registrate{% endblock %}
+  </head>
+  <body>
+{% block content %}
 
-
-<a href="{% url 'reviews_list' %}">Volver a Lista</a>
+<!-- <a href="{% url 'reviews_list' %}">Volver a Lista</a> -->
 
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Crear Cuenta">
 </form>
+{% endblock %}
