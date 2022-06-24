@@ -6,14 +6,29 @@
 
  
 
-  <!-- {% if user.is_authenticated %}
-    <a href="{% url 'user_logout' %}">Salir</a>
-    <a href="{% url 'review_create' %}">Nueva Rewiew</a>
-    <a href="{% url 'user_profile' user.id %}">Perfil {{user.username}}</a>
+  {% if user.is_authenticated %}
+  
+  <a href="{% url 'user_logout' %}">
+    <button type="button" class="btn btn-outline-primary">
+      Salir
+    </button></a>
+    
+    <a href="{% url 'review_create' %}">
+    <button type="button" class="btn btn-outline-primary">
+      Nueva Rewiew
+    </button></a>
+  <a href="{% url 'user_profile' user.id %}">
+    <button type="button" class="btn btn-outline-primary">
+      Perfil {{user.username}}
+    </button></a>
   {% else %}
-    <a href="{% url 'user_login' %}">Entrar</a>
-    <a href="{% url 'user_signup' %}">Crear Cuenta</a>
-  {% endif %} -->
+    <button type="button" class="btn btn-outline-primary">
+      <a href="{% url 'user_login' %}">Entrar</a>
+    </button>
+    <button type="button" class="btn btn-outline-primary">
+      <a href="{% url 'user_signup' %}">Crear Cuenta</a>
+    </button>
+  {% endif %}
 
 
 

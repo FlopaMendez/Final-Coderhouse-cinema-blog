@@ -12,6 +12,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 class UserSignUp(SuccessMessageMixin, CreateView):
   template_name = 'usuarios/crear_user_form.html'
   success_url = reverse_lazy('user_login')
+  success_message = "¡¡ Se creo tu perfil satisfactoriamente !!"
   form_class = UserCreationForm
 #   success_message = "¡¡ Se creo tu perfil satisfactoriamente !!"
 

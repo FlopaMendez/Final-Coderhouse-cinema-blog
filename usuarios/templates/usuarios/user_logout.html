@@ -1,2 +1,13 @@
-<h1>Saliste de tu cuenta</h1>
-<a href="{% url 'reviews_list' %}">Ir la lista de reviews</a>
+{% extends "reviews/reviews_inicio.html" %}
+{% block title %}CINEMA - Reviews{% endblock %}
+  </head>
+  <body>
+{% block content %}
+<br>
+
+<h5>Saliste de tu cuenta</h5>
+
+<a href="{% url 'inicio' %}">Volver a Inicio</a>
+
+
+{% endblock %}
