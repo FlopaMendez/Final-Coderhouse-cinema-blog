@@ -57,19 +57,17 @@ class ReviewDelete(LoginRequiredMixin,UserPassesTestMixin, DeleteView):
         return True if exist else False
 
 
-def buscar_pelicula(request):
-    if request.method == "GET":
-        form_busqueda = BuscarPeliculaForm()
-        return render(request, 'reviews/form_busqueda_.html', {"form_busqueda": form_busqueda})
-
-    elif request.method == "POST":
-        form_busqueda = BuscarPeliculaForm(request.POST)
+def buscar(request):
+    
+    if request.GET.get("pelicula_a_buscar") and request.method == "GET":
+        form_busqueda = BuscarPeliculaForm(request.GET)
         if form_busqueda.is_valid():
-            pelicula_a_buscar = form_busqueda.cleaned_data['pelicula_a_buscar']
-            titulo = ReviewModel.objects.filter(titulo__icontains=pelicula_a_buscar)
+            peliculas = peliculas.objects.filter(nombre__icontains=request.GET.get("pelicula_a_buscar"))
+            return  render(request, 'reviews/reviews_list.html', {"peliculas": peliculas, "resultados_busqueda":True})
 
-        return  render(request, 'reviews/reviews_list.html', {"titulo": titulo})
-
+    elif request.method == "GET":
+        form_busqueda = BuscarPeliculaForm()
+        return render(request, 'reviews/form_busqueda.html', {"form_busqueda": form_busqueda})
 
 def reviews_inicio(request):
     return render(request, 'reviews/reviews_inicio.html')
