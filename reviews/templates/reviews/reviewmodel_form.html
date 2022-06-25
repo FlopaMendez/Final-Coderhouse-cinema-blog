@@ -11,8 +11,8 @@
     {{ form.as_p }}
     <br>
     <input class="btn btn-primary btn-sm" type="submit" value="Guardar">
- 
+    <a class="btn btn-primary btn-sm" role="button" href="{% url 'reviews_list' %}">Volver a Lista</a>
 </form>
 
-<a class="btn btn-primary btn-sm" role="button" href="{% url 'reviews_list' %}">Volver a Lista</a>
+
 {% endblock %}
