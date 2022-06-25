@@ -4,7 +4,7 @@
   <body>
 {% block content %}
 
-<a href="{% url 'reviews_list' %}">Volver a Lista</a>
+
 <div>
     <h1>{{object.titulo}}</h1>
     <h5>{{object.director}}</h5>
@@ -13,4 +13,5 @@
     <h5>{{object.autor}}</h5>
     <p>{{object.fecha_creacion}}</p>
 </div>
+<a class="btn btn-primary" role="button" href="{% url 'reviews_list' %}">Volver a Lista</a>
 {% endblock %}

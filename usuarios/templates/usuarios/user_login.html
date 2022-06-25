@@ -7,7 +7,8 @@
 <form method="POST">
     {% csrf_token %}
     {{form.as_p}}
-    <button type="submit">Iniciar Sesión</button>
+    <!-- <button type="submit">Iniciar Sesión</button> -->
+    <input class="btn btn-primary" type="submit" value="Iniciar sesión">
 </form>
 
 {% endblock %}
