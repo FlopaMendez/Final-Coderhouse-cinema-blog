@@ -34,5 +34,5 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Luego ingrese a [http://localhost:8000/inicio/]
+Luego ingrese a http://localhost:8000/inicio/
 
