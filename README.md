@@ -6,7 +6,7 @@ Detallamos paso a seguir para su correcto funcionamiento:
 En la página "INICIO" se encontrarán con la siguiente información:
 
     a. Crear cuenta: Haciendo click en este botón, podrán crear un usuario, registrando username y password. Una vez creado el usuario, tendrán acceso a iniciar sesión.
-       Luego de iniciar sesión, haciendo click ene l botón "Perfil", se editarán los datos del usuario creado pudiendo adicionar "nombre", "apellido" y "correo electrónico".
+       Luego de iniciar sesión, haciendo click en el botón "Perfil", se editarán los datos del usuario creado pudiendo adicionar "nombre", "apellido" y "correo electrónico".
     
     b. Todas las reviews: haciendo click sobre el botón, podrán visualizar todas las reviews previamente cargadas, con el detalle del usuario que las cargó y su fecha.
        Haciendo click en el nombre de cada película, ingresarán asu review, donde verán el nombre de la película, su director, fecha de estreno y breve descripción.
@@ -19,7 +19,20 @@ En la página "INICIO" se encontrarán con la siguiente información:
     d. Haciendo click en la palabra "CINEMA" del encabezado, vuelven a la página de Inicio. Haciendo click tanto en el texto "Todas las reviews" como en su botón, podrán acceder al listado de las reviews cargadas.
        Lo mismo sucederá si quieren acceder tanto al texto "About us" como su botón, podrán obtener información sobre las creadores del blog con una breve descripción.
     
-    e. Por último, si ya completaron, revisaron y editaron la información que consideraban pertinente, puede proceder con cerrar sesión haciendo click en el botón "Salir de mi cuenta", y de este modo volverán la página de inicio.
+    e. Si ya completaron, revisaron y editaron la información que consideraban pertinente, puede proceder con cerrar sesión haciendo click en el botón "Salir de mi cuenta", y de este modo volverán la página de inicio.
        Podrán visualizar todas las reviews pero no editarlas, ya que para ello es necesario contar con un usuario creado.
 
+    e. Por último, desde el usuario administrador (user:'cinema', pass: 'cinemapass') se podrán administar las reviews publicadas como así también, los usuarios y agregar imagenes a sus perfiles (avatars)
+   
+
 Esperamos que disfruten de nuestro blog y los esperamos con novedades sobre los próximos estrenos!!!
+
+Para poder correr el blog:
+
+```bash
+python manage.py migrate
+python manage.py runserver
+```
+
+Luego ingrese a [http://localhost:8000/inicio/]
+

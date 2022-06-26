@@ -1,5 +1,4 @@
-# from django.conf import settings
-# from django.conf.urls.static import static
+
 from django.urls import path
 from usuarios import views
 
@@ -10,3 +9,4 @@ urlpatterns = [
     path("entrar/", views.UserLogin.as_view(), name="user_login"),
     path("salir/", views.UserLogout.as_view(), name="user_logout"),
 ]
+
