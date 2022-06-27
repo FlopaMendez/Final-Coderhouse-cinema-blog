@@ -22,7 +22,9 @@ En la página "INICIO" se encontrarán con la siguiente información:
     e. Si ya completaron, revisaron y editaron la información que consideraban pertinente, puede proceder con cerrar sesión haciendo click en el botón "Salir de mi cuenta", y de este modo volverán la página de inicio.
        Podrán visualizar todas las reviews pero no editarlas, ya que para ello es necesario contar con un usuario creado.
 
-    e. Por último, desde el usuario administrador (user y pass en comentarios de entrega final - plataforma coderhouse -) se podrán administar las reviews publicadas como así también, los usuarios y agregar imagenes a sus perfiles (avatars)
+    e. Por último, desde el usuario administrador (user y pass en comentarios de entrega final - plataforma coderhouse -) se podrán administar las reviews publicadas como así también, los usuarios y agregar imagenes a sus perfiles (avatars). Aquí el link al video demostrativo:
+    
+    https://drive.google.com/file/d/18hIYKtleNgQJoj231tXJxfGmi8CkfsG_/view?usp=sharing
    
 
 Esperamos que disfruten de nuestro blog y los esperamos con novedades sobre los próximos estrenos!!!
