@@ -1,5 +1,7 @@
 # Final-Coderhouse-cinema-blog
 BLOG CINEMA
+** VIDEO COMPLETO ** → https://drive.google.com/file/d/1jehmQWO2wUK1LfmqBvSoeYgZXYl1Geao/view?usp=sharing
+
 En este blog, los usuarios podrán crear un perfil y así visualizar las reviews de las distintas películas pre-cargadas.
 Detallamos paso a seguir para su correcto funcionamiento:
 
@@ -24,8 +26,7 @@ En la página "INICIO" se encontrarán con la siguiente información:
 
     e. Por último, desde el usuario administrador (user y pass en comentarios de entrega final - plataforma coderhouse -) se podrán administar las reviews publicadas como así también, los usuarios y agregar imagenes a sus perfiles (avatars). Aquí el link al video demostrativo:
     
-    https://drive.google.com/file/d/18hIYKtleNgQJoj231tXJxfGmi8CkfsG_/view?usp=sharing
-   
+  
 
 Esperamos que disfruten de nuestro blog y los esperamos con novedades sobre los próximos estrenos!!!
 
@@ -37,4 +38,6 @@ python manage.py runserver
 ```
 
 Luego ingrese a http://localhost:8000/inicio/
+
+** VIDEO COMPLETO ** → https://drive.google.com/file/d/1jehmQWO2wUK1LfmqBvSoeYgZXYl1Geao/view?usp=sharing
 
